@@ -5,45 +5,20 @@
 <h5 style="text-align: center;">{{search_content | title}}</h5>
 
 <div class="row">
-    <div class="col s4">
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://m.economictimes.com/thumb/msid-72951938,width-1200,height-900,resizemode-4,imgsize-579705/the-owners-can-also-make-a-few-changes-like-increasing-or-decreasing-a-specific-substance-it-is-better-to-minimise-treats-during-this-season-as-it-contributes-to-the-weight-.jpg"></a>
-            </div>
-            <div class="card-content">
-                <p>TEST</p>
-            </div>
-            <div class="card-action">
-                <a href="/">View Listing</a>
-            </div>
-        </div>
-    </div>
-    <div class="col s4">
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://i.insider.com/5cf56539594ea5383d3a001a?width=1100&format=jpeg&auto=webp"></a>
-            </div>
-            <div class="card-content">
-                <p>TEST</p>
-            </div>
-            <div class="card-action">
-                <a href="/">View Listing</a>
+    {% for post in final_postings %}
+        <div class="col s4" style="min-height: 400px">
+            <div class="card">
+                <div class="card-image">
+                    <a href={{post.1}}><img src={{post.2}} style="height: 200px"></a>
+                </div>
+                <div class="card-content">
+                    <p>{{post.0}}</p>
+                </div>
+                <div class="card-action">
+                    <a href={{post.1}}>View Listing</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col s4">
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://i.guim.co.uk/img/media/03734ee186eba543fb3d0e35db2a90a14a5d79e3/0_173_5200_3120/master/5200.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9c30ed97ea8731f3e2a155467201afe3"></a>
-            </div>
-            <div class="card-content">
-                <p>TEST</p>
-            </div>
-            <div class="card-action">
-                <a href="/">View Listing</a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
-
 {% endblock content %}
