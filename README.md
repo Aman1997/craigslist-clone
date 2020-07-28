@@ -13,3 +13,5 @@ To run the application:
 
 3. Run the web application on local server:- 
     python manage.py runserver
+
+Live preview :- https://craigslistclone.azurewebsites.net/
